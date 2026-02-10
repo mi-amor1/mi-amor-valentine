@@ -10,10 +10,6 @@
       padding: 0;
       height: 100vh;
       display: flex;
-      border: 20px solid transparent;
-      background-image: url('roses-border.png'); /* Use the generated roses border */
-      background-repeat: repeat;
-      background-size: 150px;
     }
     .left {
       flex: 3; /* 3/4 of the screen */
@@ -33,17 +29,18 @@
     }
     h1 {
       color: pink;
-      font-size: 48px;
+      font-size: 240px; /* 5 times bigger than before */
       text-align: center;
-      margin-bottom: 40px;
+      margin: 0;
+      line-height: 1; /* tighter spacing */
     }
     .buttons {
-      margin-top: 20px;
+      margin-top: 40px;
     }
     button {
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 20px;
+      padding: 20px 40px;
+      margin: 15px;
+      font-size: 28px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -69,7 +66,11 @@
 </head>
 <body>
   <div class="left">
-    <h1>WILL YOU BE MY VALENTINE?</h1>
+    <h1>WILL</h1>
+    <h1>YOU</h1>
+    <h1>BE</h1>
+    <h1>MY</h1>
+    <h1>VALENTINE</h1>
     <div class="buttons">
       <button id="yesBtn" onclick="sayYes()">YES</button>
       <button id="noBtn" onclick="sayNo()">NO</button>
@@ -90,7 +91,7 @@
   <script>
     function sayYes() {
       document.getElementById("celebrationSound").play();
-      alert("THANKYOU, I LOVE YOU SO MUCH MI AMOR");
+      // No popup here, just plays sound
     }
 
     function sayNo() {
