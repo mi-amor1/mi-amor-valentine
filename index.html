@@ -1,5 +1,102 @@
-user p6139905
-pass Wx3S7z2GeZ
-@536MaryOF
-@536CarolineOF
-@635Kamzeiya
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valentine's Proposal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      border: 20px solid transparent;
+      background-image: url('roses-border.png'); /* Use the generated roses border */
+      background-repeat: repeat;
+      background-size: 150px;
+    }
+    .left {
+      flex: 3; /* 3/4 of the screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .right {
+      flex: 1; /* 1/3 of the screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      color: pink;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: pink;
+      color: white;
+    }
+    #noBtn {
+      background-color: red;
+      color: white;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    .right img {
+      width: 100%;
+      max-height: 45%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1>WILL YOU BE MY VALENTINE?</h1>
+    <div class="buttons">
+      <button id="yesBtn" onclick="sayYes()">YES</button>
+      <button id="noBtn" onclick="sayNo()">NO</button>
+    </div>
+  </div>
+
+  <div class="right">
+    <img src="picture1.jpg" alt="Top Picture">
+    <img src="picture2.jpg" alt="Bottom Picture">
+  </div>
+
+  <!-- Celebration sound -->
+  <audio id="celebrationSound">
+    <source src="celebration.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function sayYes() {
+      document.getElementById("celebrationSound").play();
+      alert("THANKYOU, I LOVE YOU SO MUCH MI AMOR");
+    }
+
+    function sayNo() {
+      alert("SORRY, CANT ACCEPT YOUR CHOICE, PLEASE TRY SELECTING YES");
+    }
+  </script>
+</body>
+</html>
+
